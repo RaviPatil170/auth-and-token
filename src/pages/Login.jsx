@@ -18,8 +18,9 @@ export default function Login() {
       role: "admin",
     };
 
-    const fakeToken = "jwt-token-123";
-    login(fakeUser, fakeToken);
+    const fakeAccessToken = "access-token-123";
+    const fakeRefreshToken = "refresh-token-456";
+    login(fakeUser, fakeAccessToken, fakeRefreshToken);
     navigate("/dashboard");
   }
   return (

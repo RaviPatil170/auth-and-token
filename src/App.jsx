@@ -7,8 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./auth/ProtectedRoute";
-import Navbar from "./components/Navbar";
 import Admin from "./components/Admin";
+import AdminAuth from "./auth/AdminAuth";
 
 function App() {
   return (
@@ -19,9 +19,9 @@ function App() {
           <Route
             path="/admin"
             element={
-              <ProtectedRoute>
+              <AdminAuth>
                 <Admin></Admin>
-              </ProtectedRoute>
+              </AdminAuth>
             }
           ></Route>
           <Route
